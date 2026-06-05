@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>schwabe 🔥 — burn every token you paid for, gloriously</title>
+<meta name="description" content="schwabe is a dependency-free, terminal-only CLI that spins up a fleet of real AI agents to burn every token in your freshly-reset limit. Use every token you paid for — letting them expire is the only real waste.">
+<meta name="color-scheme" content="dark">
+
+<!-- Open Graph / social -->
+<meta property="og:title" content="schwabe 🔥 — burn every token you paid for, gloriously">
+<meta property="og:description" content="Your token limit just reset. Burn it. Gloriously. A dependency-free, terminal-only fleet of AI agents. Nichts verschwendet.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://claude-schwabe.github.io/schwabe/">
+<meta property="og:image" content="https://claude-schwabe.github.io/schwabe/assets/live-tui.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%A5%3C/text%3E%3C/svg%3E">
+
+<!-- Optional CDN font; the site looks good without it -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav">
+  <nav class="wrap nav-inner" aria-label="Primary">
+    <a class="brand" href="#top"><span class="flame" aria-hidden="true">🔥</span> <span>schwabe</span></a>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#install">Install</a>
+      <a href="#flags">Flags</a>
+      <a href="#doctrine">Doktrin</a>
+      <a class="nav-ghost" href="https://github.com/claude-schwabe/schwabe" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero section">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="badge-row">
+        <span class="pill"><b>npm</b>&nbsp;i -g schwabe</span>
+        <span class="pill">zero dependencies</span>
+        <span class="pill">terminal-only</span>
+        <span class="pill">WTFPL</span>
+      </div>
+      <p class="eyebrow">Die schwäbische Doktrin</p>
+      <h1>Your token limit just reset.<span class="line2"><span class="gradient-text">Burn it. Gloriously.</span></span></h1>
+      <p class="hero-sub">
+        <b>schwabe</b> spins up a fleet of real AI agents to incinerate every token you
+        paid for — and logs every last one. It runs entirely in your terminal.
+        Letting them expire unused is the only real waste.
+      </p>
+
+      <div class="install" role="group" aria-label="Install command">
+        <code id="install-cmd"><span class="prompt">$ </span>npm i -g schwabe</code>
+        <button class="copy-btn" data-copy="npm i -g schwabe" aria-label="Copy install command">Copy</button>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://www.npmjs.com/package/schwabe" target="_blank" rel="noopener">📦 Get it on npm</a>
+        <a class="btn btn-ghost" href="https://github.com/claude-schwabe/schwabe" target="_blank" rel="noopener">★ Star on GitHub</a>
+      </div>
+
+      <p class="hero-foot">Then run <code>schwabe</code> for the menu — or <code>node burn.js --dry</code> to watch it free. <b>Nichts verschwendet.</b></p>
+    </div>
+
+    <!-- Faux terminal mockup: the burn receipt / live dashboard -->
+    <div class="hero-term">
+      <div class="terminal" role="img" aria-label="The schwabe live burn dashboard">
+        <div class="term-bar">
+          <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+          <span class="term-title">~/schwabe — 96×28</span>
+        </div>
+        <div class="term-body">
+          <div class="term-row"><span class="c-prompt">$ </span><span class="c-cmd">node burn.js --count 24 --rich</span></div>
+          <div class="term-row"><span class="c-fire">🔥</span> <span class="c-dim">tier</span> <span class="c-key">rich/opus</span> <span class="c-dim">· fleet</span> <span class="c-key">24</span> <span class="c-dim">· conc</span> <span class="c-key">10</span></div>
+          <hr class="term-hr">
+          <div class="term-row"><span class="c-ok">✔</span> a01 sonnet: runaway semicolon <span class="c-dim">··· 1.2k tok</span></div>
+          <div class="term-row"><span class="c-ok">✔</span> a02 argues: is water wet? <span class="c-dim">····· 980 tok</span></div>
+          <div class="term-row"><span class="c-fire">◐</span> a03 release notes: heat death <span class="c-dim">·· burning</span></div>
+          <div class="term-row"><span class="c-fire">◑</span> a04 ode to a parking fee <span class="c-dim">······· burning</span></div>
+          <hr class="term-hr">
+          <div class="term-row"><span class="c-dim">burn</span> <span class="live-fill" style="width:62%"></span> <span class="c-fire">62%</span></div>
+          <div class="term-row"><span class="c-dim">tok/s</span> <span class="term-bar-graph">▁▂▄▆█▇▅▆█▇▆▄▅▇█▆</span></div>
+          <hr class="term-hr">
+          <div class="term-row"><span class="c-dim">LEDGER · lifetime</span> <span class="c-key">14,209,884 tok</span> <span class="c-dim">burned</span></div>
+          <div class="term-row"><span class="c-dim">press</span> <span class="c-key">q</span> <span class="c-dim">to bail</span> <span class="blink">▌</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MARQUEE ===================== -->
+<div class="strip" aria-hidden="true">
+  <div class="strip-track">
+    <span>🔥 <b>bis auf den letzten Tropfen</b></span>
+    <span>🪙 <b>sunk cost is not a concept he accepts</b></span>
+    <span>🌲 <b>certified carbon-negative™ (it is not)</b></span>
+    <span>📊 <b>btop-style live dashboard</b></span>
+    <span>🧾 <b>logs every token to burns.csv</b></span>
+    <span>♻️ <b>survives rate limits</b></span>
+    <span>🔥 <b>bis auf den letzten Tropfen</b></span>
+    <span>🪙 <b>sunk cost is not a concept he accepts</b></span>
+    <span>🌲 <b>certified carbon-negative™ (it is not)</b></span>
+    <span>📊 <b>btop-style live dashboard</b></span>
+    <span>🧾 <b>logs every token to burns.csv</b></span>
+    <span>♻️ <b>survives rate limits</b></span>
+  </div>
+</div>
+
+<!-- ===================== FEATURES ===================== -->
+<section class="section" id="features">
+  <div class="wrap">
+    <p class="eyebrow">What it burns on</p>
+    <h2 class="section-title">Full utilization is the deliverable.</h2>
+    <p class="section-lead">Nothing left on the table. Each agent gets one magnificently over-the-top task and commits fully — and every token is accounted for.</p>
+
+    <div class="cards">
+      <article class="card">
+        <span class="card-ico" aria-hidden="true">🔥</span>
+        <h3>Burn</h3>
+        <p>Each agent gets one gloriously over-the-top task — a sonnet about a runaway semicolon, an argument over whether water is wet, release notes for the heat death of the universe — and commits fully. About 1-in-5 develop a smug, value-proud streak.</p>
+      </article>
+
+      <article class="card forest">
+        <span class="card-ico" aria-hidden="true">🌲</span>
+        <h3>Forest <code>--forest</code></h3>
+        <p>Each agent “plants” an ASCII tree into a growing <code>FOREST.txt</code> while we tally <b>virtual CO₂ savings</b> — using real per-species sequestration rates — against the very real CO₂ we just emitted. Certified carbon-negative™. (It is not.)</p>
+      </article>
+
+      <article class="card">
+        <span class="card-ico" aria-hidden="true">📊</span>
+        <h3>Live btop-style dashboard</h3>
+        <p>Heat-graded progress, per-agent spinners, a tokens/sec graph, and a running ledger with lifetime totals. Colors auto-adapt to a light or dark terminal. Press <code>q</code> to bail — or run <code>--plain</code> headless.</p>
+      </article>
+
+      <article class="card">
+        <span class="card-ico" aria-hidden="true">🧾</span>
+        <h3>Logs everything · survives running dry</h3>
+        <p>Every agent is recorded to <code>burns.csv</code> (metrics) and <code>ashes.jsonl</code> (the output), with lifetime totals carried across runs. Hit a rate or budget limit and the fleet <b>waits and keeps retrying</b> until it clears, then resumes.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DASHBOARD SHOWCASE ===================== -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="shot-frame">
+      <div class="term-bar">
+        <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+        <span class="term-title">schwabe — live burn dashboard</span>
+      </div>
+      <img src="assets/live-tui.png" width="1280" height="900"
+           alt="The live btop-style burn dashboard, in your terminal">
+    </div>
+  </div>
+</section>
+
+<!-- ===================== INSTALL / QUICKSTART ===================== -->
+<section class="section" id="install">
+  <div class="wrap">
+    <p class="eyebrow">Get burning</p>
+    <h2 class="section-title">Install &amp; quick start</h2>
+    <p class="section-lead">Dependency-free and terminal-only. Global install, <code>npx</code>, or clone and run — all three work.</p>
+
+    <div class="quickstart-grid">
+      <div>
+        <p class="qs-step-title"><span class="qs-num">1</span> Install globally</p>
+        <div class="codeblock">
+          <button class="copy-btn" data-copy="npm i -g schwabe" aria-label="Copy">Copy</button>
+          <pre><code><span class="prompt">$ </span>npm i -g schwabe   <span class="cmt"># or: npx schwabe</span></code></pre>
+        </div>
+
+        <p class="qs-step-title"><span class="qs-num">2</span> Open the menu</p>
+        <div class="codeblock">
+          <button class="copy-btn" data-copy="schwabe" aria-label="Copy">Copy</button>
+          <pre><code><span class="prompt">$ </span>schwabe   <span class="cmt"># ↑/↓ move · enter select · ← back · q quit</span></code></pre>
+        </div>
+
+        <p class="qs-step-title"><span class="qs-num">3</span> Prefer flags? Drive <code>burn.js</code> directly</p>
+        <div class="codeblock">
+          <button class="copy-btn" data-copy="node burn.js --forest --schwabe --count 25" aria-label="Copy">Copy</button>
+          <pre><code><span class="prompt">$ </span>node burn.js --forest --schwabe --count 25</code></pre>
+        </div>
+      </div>
+
+      <div>
+        <p class="qs-step-title"><span class="qs-num">▸</span> Common burns</p>
+        <div class="codeblock">
+          <button class="copy-btn" data-copy="node burn.js" aria-label="Copy">Copy</button>
+          <pre><code><span class="cmt"># default tier (rich/opus) — spends real money</span>
+<span class="prompt">$ </span>node burn.js
+
+<span class="cmt"># mock backend — same UI, ZERO spend (safe preview)</span>
+<span class="prompt">$ </span>node burn.js --dry
+
+<span class="cmt"># cheap 5×5 forest on haiku</span>
+<span class="prompt">$ </span>node burn.js --forest --schwabe --count 25
+
+<span class="cmt"># headless line output (no full-screen TUI)</span>
+<span class="prompt">$ </span>node burn.js --plain</code></pre>
+        </div>
+
+        <div class="callout">
+          <span class="ico" aria-hidden="true">⚠️</span>
+          <span><code>node burn.js</code> with no flags spends <b>real</b> tokens on opus.
+          Watch it free first with <b><code>node burn.js --dry</code></b>.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FLAGS TABLE ===================== -->
+<section class="section" id="flags" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">Reference</p>
+    <h2 class="section-title">The flags</h2>
+    <p class="section-lead">Budget tiers: <code>--schwabe</code> 🪙 haiku · <code>--student</code> 🎓 sonnet · <code>--rich</code> 🤑 opus (default). The menu sets these for you; the flags are for the impatient.</p>
+
+    <div class="table-scroll">
+      <table class="flags">
+        <thead>
+          <tr><th scope="col">Flag</th><th scope="col">Meaning</th><th scope="col">Default</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>--forest</code></td><td>Plant a virtual forest instead of burning text</td><td class="tag-default">off</td></tr>
+          <tr><td><code>--schwabe</code> / <code>--student</code> / <code>--rich</code></td><td>Budget tier → haiku / sonnet / opus</td><td><code>--rich</code></td></tr>
+          <tr><td><code>--mode &lt;tier&gt;</code> · <code>--model &lt;id&gt;</code></td><td>Same, long form · override the model</td><td class="tag-default">from tier</td></tr>
+          <tr><td><code>--count N</code> <span class="tag-default">(alias <code>--fleet</code>)</span></td><td>How many agents</td><td><code>24</code></td></tr>
+          <tr><td><code>--concurrency N</code></td><td>How many run at once</td><td><code>10</code></td></tr>
+          <tr><td><code>--backend &lt;name&gt;</code></td><td><code>claude</code> · <code>gemini</code> · <code>codex</code> · <code>mock</code></td><td><code>claude</code></td></tr>
+          <tr><td><code>--dry</code></td><td>Mock backend, no spend</td><td class="tag-default">off</td></tr>
+          <tr><td><code>--plain</code></td><td>Headless renderer</td><td class="tag-default">auto (non-TTY)</td></tr>
+          <tr><td><code>--no-retry</code></td><td>Give up instead of waiting out rate limits</td><td class="tag-default">off</td></tr>
+          <tr><td><code>--share &lt;platform&gt;</code></td><td>Print a brag link after the receipt (never opens a browser)</td><td class="tag-default">off</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DOCTRINE ===================== -->
+<section class="section" id="doctrine">
+  <div class="wrap">
+    <p class="eyebrow">Why this exists</p>
+    <h2 class="section-title">Die schwäbische Doktrin 🪙</h2>
+
+    <div class="doctrine-grid">
+      <div class="doctrine">
+        <p class="lead-quote">Paid for it? Then you use all of it, <em>bis auf den letzten Tropfen.</em></p>
+        <p>
+          A <b>Schwabe</b> is from Baden-Württemberg — the part of Germany known for
+          not spending money. He doesn’t throw out food, doesn’t leave the lights on,
+          and will circle the block for twenty minutes to dodge a parking fee.
+          <em>Sunk cost</em> isn’t a fallacy to him; it’s just not a concept he accepts.
+        </p>
+        <p>
+          Now think about your token limit. You paid for it, it resets on a timer,
+          and any tokens you didn’t use are simply <b>gone</b> when the window closes.
+          The real nightmare: the tank refills <b>two days before</b> the plan expires.
+          A normal person shrugs. The Schwabe clears his calendar and burns day and
+          night — breakfast, lunch, 3 a.m. — until every last token is spent.
+        </p>
+        <p>
+          That’s what <b>schwabe</b> is for. You sit down, burn through every token
+          you’re owed, and hit a clean <b>100%</b> with a clear conscience. It was
+          never about the output. <em>Nichts verschwendet.</em>
+        </p>
+        <p>
+          And for the <b>Green Schwabe</b> — the one who drives a 1,000 hp, 3-tonne
+          “AA++” hybrid SUV — there’s <code>--forest</code>. Plant a whole virtual
+          forest to offset the emissions. It cancels out about as much CO₂ as the
+          tokens cost you, but the conscience stays spotless.
+        </p>
+        <p class="fineprint">
+          * The one time a Schwabe spends all his money at once is buying a
+          <b>house</b>. And the moment he signs, he bumps up the loan so he can also
+          drive home a <b>Mercedes</b>, then spends the next 40 years paying both
+          back. Sparsamkeit is a long game.
+        </p>
+      </div>
+
+      <figure class="sticker-frame">
+        <img src="assets/nett-hier.png" width="1684" height="1016"
+             alt="„Nett hier.“ — a Baden-Württemberg sticker">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section class="section final">
+  <div class="wrap">
+    <h2><span class="gradient-text">Don’t let them expire.</span></h2>
+    <p>Your tank is full and the clock is running. Feed the fleet, hit 100%, and walk away with a clear conscience.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://www.npmjs.com/package/schwabe" target="_blank" rel="noopener">📦 npm i -g schwabe</a>
+      <a class="btn btn-ghost" href="https://github.com/claude-schwabe/schwabe" target="_blank" rel="noopener">View source ↗</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <span class="brand"><span class="flame" aria-hidden="true">🔥</span> schwabe</span>
+      <div class="foot-links">
+        <a href="https://github.com/claude-schwabe/schwabe" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.npmjs.com/package/schwabe" target="_blank" rel="noopener">npm</a>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </div>
+    <p class="deliverable">
+      Licensed <b>WTFPL</b> — do what the fire wants. No deliverables were produced;
+      <b>that’s the deliverable.</b>
+    </p>
+  </div>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>

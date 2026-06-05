@@ -1,0 +1,32 @@
+# ─── Dependencies ───────────────────────────────────────────────
+node_modules/
+
+# ─── Logs ───────────────────────────────────────────────────────
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ─── Environment / secrets ──────────────────────────────────────
+.env
+.env.*
+
+# ─── OS / editor cruft ──────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# ─── Generated burn artifacts ───────────────────────────────────
+# Runtime data, not source — regenerated on every burn. The curated
+# HALL_OF_FLAME.md and art/ (linked from the README) are kept on purpose.
+burns.csv
+ashes.jsonl
+forest.jsonl
+FOREST.txt
+
+# ─── Coverage / tooling scratch ─────────────────────────────────
+coverage/
+.nyc_output/
+.playwright-mcp/

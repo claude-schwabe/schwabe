@@ -1,0 +1,42 @@
+{
+  "name": "schwabe",
+  "version": "1.0.1",
+  "description": "Your token limit just reset and you've got 37% to burn before it expires. Use every last one — gloriously.",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claude-schwabe/schwabe.git"
+  },
+  "homepage": "https://github.com/claude-schwabe/schwabe#readme",
+  "bugs": {
+    "url": "https://github.com/claude-schwabe/schwabe/issues"
+  },
+  "bin": {
+    "schwabe": "./launcher.js",
+    "tokenburner": "./launcher.js",
+    "burn": "./burn.js",
+    "burn-share": "./share.js"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "test:watch": "node --test --watch test/*.test.js",
+    "test:coverage": "node --test --experimental-test-coverage test/*.test.js",
+    "menu": "node launcher.js",
+    "burn": "node burn.js",
+    "forest": "node burn.js --forest",
+    "demo": "node burn.js --dry",
+    "share": "node share.js",
+    "schwabe": "node burn.js --schwabe",
+    "student": "node burn.js --student",
+    "rich": "node burn.js --rich",
+    "inferno": "node burn.js --student --count 64 --concurrency 10",
+    "panic": "node burn.js --rich --count 200 --concurrency 12",
+    "cards": "node scripts/pixel-card.js"
+  },
+  "keywords": ["tokens", "fire", "fleet", "schwabe", "thrift", "art"],
+  "license": "WTFPL",
+  "author": "the 100+ agent fleet",
+  "engines": {
+    "node": ">=18"
+  }
+}
