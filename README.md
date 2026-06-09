@@ -115,7 +115,7 @@ If you've never met one: a Schwabe is from **Baden-Württemberg**, the part of
 Germany known for not spending money.\* He doesn't throw out food, doesn't leave
 the lights on, and will circle the block for twenty minutes to dodge a parking
 fee. *Sunk cost* isn't a fallacy to him, it's just not a concept he accepts.
-Paid for it? Then you use all of it, **bis auf den letzten Tropfen.**
+Paid for it? Then you use all of it, **bis auf den letzten Token.**
 
 Now think about your token limit. You paid for it, it resets on a timer, and any
 tokens you didn't use are simply gone when the window closes. Most people don't
