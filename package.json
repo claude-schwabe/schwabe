@@ -1,6 +1,6 @@
 {
   "name": "schwabe",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Your token limit just reset and you've got 37% to burn before it expires. Use every last one — gloriously.",
   "type": "module",
   "repository": {
@@ -12,10 +12,10 @@
     "url": "https://github.com/claude-schwabe/schwabe/issues"
   },
   "bin": {
-    "schwabe": "./launcher.js",
-    "tokenburner": "./launcher.js",
-    "burn": "./burn.js",
-    "burn-share": "./share.js"
+    "schwabe": "launcher.js",
+    "tokenburner": "launcher.js",
+    "burn": "burn.js",
+    "burn-share": "share.js"
   },
   "scripts": {
     "test": "node --test test/*.test.js",
@@ -34,7 +34,14 @@
     "cards": "node scripts/pixel-card.js",
     "banner": "node scripts/banner.js"
   },
-  "keywords": ["tokens", "fire", "fleet", "schwabe", "thrift", "art"],
+  "keywords": [
+    "tokens",
+    "fire",
+    "fleet",
+    "schwabe",
+    "thrift",
+    "art"
+  ],
   "license": "WTFPL",
   "author": "the 100+ agent fleet",
   "engines": {
