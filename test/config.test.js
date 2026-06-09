@@ -38,11 +38,12 @@ test("budget tiers and their aliases pick the right model", () => {
   assert.equal(parseConfig(["--schwabe"]).model, MODES.schwabe.model);
   assert.equal(parseConfig(["--student"]).model, MODES.student.model);
   assert.equal(parseConfig(["--rich"]).model, MODES.rich.model);
+  assert.equal(parseConfig(["--whale"]).model, MODES.whale.model, "--whale is the fable 5 apex tier");
   assert.equal(parseConfig(["--broke"]).mode, "schwabe");
   assert.equal(parseConfig(["--peasant"]).mode, "schwabe", "legacy --peasant aliases to schwabe");
   assert.equal(parseConfig(["--poor"]).mode, "student");
   assert.equal(parseConfig(["--baller"]).mode, "rich");
-  assert.equal(parseConfig(["--whale"]).mode, "rich");
+  assert.equal(parseConfig(["--fable"]).mode, "whale", "--fable aliases to whale");
 });
 
 test("--mode picks a tier; an unknown tier falls back to the default", () => {

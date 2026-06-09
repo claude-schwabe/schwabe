@@ -31,7 +31,8 @@
     "rich": "node burn.js --rich",
     "inferno": "node burn.js --student --count 64 --concurrency 10",
     "panic": "node burn.js --rich --count 200 --concurrency 12",
-    "cards": "node scripts/pixel-card.js"
+    "cards": "node scripts/pixel-card.js",
+    "banner": "node scripts/banner.js"
   },
   "keywords": ["tokens", "fire", "fleet", "schwabe", "thrift", "art"],
   "license": "WTFPL",

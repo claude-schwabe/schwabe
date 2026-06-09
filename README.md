@@ -1,5 +1,7 @@
 # 🔥 schwabe
 
+![schwabe — the token burner · too thrifty to let a token expire](art/banner.png)
+
 > Your token limit just reset, and it expires before you'll ever use it honestly.
 > The only responsible thing to do is **not to waste them.**
 
@@ -41,7 +43,7 @@ node burn.js --plain                        # headless line output (no full-scre
 | flag | meaning | default |
 |------|---------|---------|
 | `--forest` | plant a virtual forest instead of burning text | off |
-| `--schwabe` / `--student` / `--rich` | budget tier → haiku / sonnet / opus | `--rich` |
+| `--schwabe` / `--student` / `--rich` / `--whale` | budget tier → haiku / sonnet / opus / **fable 5** 🐋 | `--rich` |
 | `--mode <tier>` · `--model <id>` | same, long form · override the model | from tier |
 | `--count N` (alias `--fleet`) | how many agents in total | ∞ (endless) |
 | `--concurrency N` (alias `--parallel`) | how many run at once (~1 GB RAM each) | `6` |
